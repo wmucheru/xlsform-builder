@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="">
+<title>xfront</title>
+
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Xfront</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                    <li class="active"><a href="#new">Create New</a></li>
+                    <li><a href="#import">Import</a></li>
+                    <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+  <form id="xlsForm">
+    <div class="col-md-8 mainbox">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <span>Form Settings</span>
+              <a href="#" class="pull-right">
+                  <span class="glyphicon glyphicon-pencil"></span> Edit
+              </a>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-4">
+                    <label>Form Title</label>
+                    <input class="form-control" type="text" name="form_title"/>
+                </div>
+                <div class="col-sm-4">
+                    <label>Form ID</label>
+                    <input class="form-control" type="text" name="form_id"/>
+                </div>
+                <div class="col-sm-4">
+                    <label>Form Style</label>
+                    <select name="form_style" class="form-control">
+                        <option value="grid">Grid (Desktops/Laptops)</option>
+                        <option value="inline">Inline (Mobile phones/Tablets)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br/>
+        
+        <span class="pull-right" style="color:red;">Fields: 2</span>
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active">
+                <a href="#tab-survey" data-toggle="tab">
+                    <span class="glyphicon glyphicon-list-alt"></span> Survey</a>
+            </li>
+            <li>
+                <a href="#tab-choices" data-toggle="tab">
+                    <span class="glyphicon glyphicon-check"></span> Choices</a>
+            </li>
+<!--
+            <li>
+                <a href="#tab-settings" data-toggle="tab">
+                    <span class="glyphicon glyphicon-wrench"></span> Preview Form</a>
+            </li>
+-->
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="tab-survey">
+            <h3>Survey</h3>
+            
+            <!--
+                text
+                integer
+                decimal
+                select_one [options] [or_other]
+                select_multiple [options] [or_other]
+                acknowledge
+                date
+                datetime
+                time
+                geopoint
+                barcode
+                image
+                audio
+                video
+                note
+                calculate
+            -->
+            
+            <div class="panel">
+                <div class="panel-header">
+                    <span class="question-number" data-qindex="1">1</span>
+                </div>
+                <div class="clearfix">
+                    <div class="col-md-9">
+                        <h4>Fields</h4>
+                        <select name="type[]">
+                            <option value="text">text</option>
+                            <option value="integer">integer</option>
+                            <option value="decimal">decimal</option>
+                            <option value="select_one">select_one</option>
+                            <option value="select_multiple">select_multiple</option>
+                            <option value="acknowledge">acknowledge</option>
+                            <option value="date">date</option>
+                            <option value="datetime">datetime</option>
+                            <option value="time">time</option>
+                            <option value="geopoint">geopoint</option>
+                            <option value="barcode">barcode</option>
+                            <option value="image">image</option>
+                            <option value="audio">audio</option>
+                            <option value="video">video</option>
+                            <option value="note">note</option>
+                            <option value="calculate"></option>
+                        </select>
+                        <label>Type</label><br/>
+                        
+                        <input type="text" name="name[]"/>
+                        <label>Name</label><br/>
+                        
+                        <input type="text" name="label[]"/>
+                        <label>Label</label>
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Field options</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-header">
+                    <span class="question-number" data-qindex="2">2</span>
+                </div>
+                <div class="clearfix">
+                    <div class="col-md-9">
+                        <h4>Fields</h4>
+                        <select name="type[]">
+                            <option value="text">text</option>
+                            <option value="integer">integer</option>
+                            <option value="decimal">decimal</option>
+                            <option value="select_one">select_one</option>
+                            <option value="select_multiple">select_multiple</option>
+                            <option value="acknowledge">acknowledge</option>
+                            <option value="date">date</option>
+                            <option value="datetime">datetime</option>
+                            <option value="time">time</option>
+                            <option value="geopoint">geopoint</option>
+                            <option value="barcode">barcode</option>
+                            <option value="image">image</option>
+                            <option value="audio">audio</option>
+                            <option value="video">video</option>
+                            <option value="note">note</option>
+                            <option value="calculate"></option>
+                        </select>
+                        <label>Type</label><br/>
+                        
+                        <input type="text" name="name[]"/>
+                        <label>Name</label><br/>
+                        
+                        <input type="text" name="label[]"/>
+                        <label>Label</label>
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Field options</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#" class="btn btn-success" data-fieldindex="1">
+                <span class="glyphicon glyphicon-plus"></span> Add field
+            </a>
+            
+          </div>
+          
+          <div class="tab-pane" id="tab-choices">
+            <h3>Choices</h3>
+            
+          </div>
+          
+<!--
+          <div class="tab-pane" id="tab-settings">
+            <h3>Preview Form</h3>
+          </div>
+-->
+        </div>
+    </div>
+    
+    <div class="col-md-4 sidebar">
+        <h3>Info bar/Or field preview when selected</h3>
+        <div class="alert alert-info">
+            <input type="checkbox" name="autoinfo" id="autoinfo"/>
+            <label for="autoinfo">Enable auto info</label>
+        </div>
+        On clicking a particular type, instructions from xlsform.org for a particular item will be shown (and link to it perhaps?)
+    </div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

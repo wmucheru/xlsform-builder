@@ -1,0 +1,18 @@
+
+.page-header{
+    border:0;
+    margin-top:0;
+    margin-bottom:0.5em;
+}
+.mainbox{
+    padding-right:2em;
+}
+.sidebar{
+    background:#EFEFEF;
+    padding-left:2em;
+    padding-bottom:2em;
+}
+
+.nav-tabs a > span.glyphicon{
+    margin-right:5px;
+}
